@@ -1,0 +1,20 @@
+{
+    "sqltools.connections": [
+        {
+            "pgOptions": {
+                "statement_timeout": 5000,
+                "query_timeout": 5000,
+                "connectionTimeoutMillis": 5000,
+                "idleTimeoutMillis": 5000
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "MelosBookStore",
+            "database": "melosbookstore",
+            "username": "kodjocode",
+            "password": "kodjocode1234"
+        }
+    ]
+}

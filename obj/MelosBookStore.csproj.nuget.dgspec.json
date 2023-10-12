@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/kodjocode/Codesandbox/C#/MelosBookStore/MelosBookStore.csproj": {}
+    "/Users/faithsromawudaappoh/Codebase/Backend/MelosBookStoreBackend/MelosBookStore.csproj": {}
   },
   "projects": {
-    "/home/kodjocode/Codesandbox/C#/MelosBookStore/MelosBookStore.csproj": {
+    "/Users/faithsromawudaappoh/Codebase/Backend/MelosBookStoreBackend/MelosBookStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kodjocode/Codesandbox/C#/MelosBookStore/MelosBookStore.csproj",
+        "projectUniqueName": "/Users/faithsromawudaappoh/Codebase/Backend/MelosBookStoreBackend/MelosBookStore.csproj",
         "projectName": "MelosBookStore",
-        "projectPath": "/home/kodjocode/Codesandbox/C#/MelosBookStore/MelosBookStore.csproj",
-        "packagesPath": "/home/kodjocode/.nuget/packages/",
-        "outputPath": "/home/kodjocode/Codesandbox/C#/MelosBookStore/obj/",
+        "projectPath": "/Users/faithsromawudaappoh/Codebase/Backend/MelosBookStoreBackend/MelosBookStore.csproj",
+        "packagesPath": "/Users/faithsromawudaappoh/.nuget/packages/",
+        "outputPath": "/Users/faithsromawudaappoh/Codebase/Backend/MelosBookStoreBackend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/kodjocode/.nuget/NuGet/NuGet.Config"
+          "/Users/faithsromawudaappoh/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -68,12 +68,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[7.0.10, 7.0.10]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -82,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/7.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.401/RuntimeIdentifierGraph.json"
         }
       }
     }

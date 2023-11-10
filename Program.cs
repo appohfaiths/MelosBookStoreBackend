@@ -5,7 +5,7 @@ using MelosBookStore.Data;
 using MelosBookStore.Seed;
 
 var builder = WebApplication.CreateBuilder(args);
-var connectionString = "Host=localhost;Port=5432;Username=kodjocode;Password=kodjocode1234;Database=melosbookstore";
+var connectionString = "Host=localhost;Port=5432;Username=postgres;Password=kodjo1234;Database=melosbookstore";
 string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 builder.Services.AddCors(options => {

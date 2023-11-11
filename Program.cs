@@ -1,11 +1,21 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System;
+using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
 using MelosBookStore.Models;
 using MelosBookStore.Data;
 using MelosBookStore.Seed;
+using MelosBookStore.Authentication;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = "Host=localhost;Port=5432;Username=postgres;Password=kodjo1234;Database=melosbookstore";
+var configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
+var secretKey = configuration["Jwt:SecretKey"]; // Store your secret key in appsettings.json
+
 string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 builder.Services.AddCors(options => {
@@ -128,7 +138,7 @@ app.MapPut("/user/{id}", async (BookStoreContext db, User updateUser, int id) =>
       User.FirstName = updateUser.FirstName;
       User.LastName = updateUser.LastName;
       User.Email = updateUser.Email;
-      User.Password = updateUser.Password;
+      User.PasswordHash = updateUser.PasswordHash;
       User.PhoneNumber = updateUser.PhoneNumber;
       await db.SaveChangesAsync();
       return Results.NoContent();
@@ -184,6 +194,23 @@ app.MapDelete("/review/{id}", async (BookStoreContext db, int id) =>
    db.Reviews.Remove(Review);
    await db.SaveChangesAsync();
    return Results.Ok();
+});
+
+// Authentication
+// Login
+app.MapPost("/login", async (BookStoreContext db, [FromBody] LoginRequest loginRequest) =>
+{
+    var user = await db.Users.FirstOrDefaultAsync(u => u.Email == loginRequest.Email);
+
+    if (user == null || !user.VerifyPassword(loginRequest.Password))
+    {
+      return Results.Unauthorized();
+    }
+
+    var tokenService = new TokenService(secretKey);
+    var token = tokenService.GenerateToken(user.Id, user.FirstName, user.LastName);
+
+    return Results.Ok(new { Token = token, user.FirstName, user.LastName });
 });
 
 app.UseHttpsRedirection();

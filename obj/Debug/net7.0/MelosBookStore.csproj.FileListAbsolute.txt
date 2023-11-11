@@ -82,3 +82,11 @@
 /Users/faithsromawudaappoh/Codebase/Backend/MelosBookStoreBackend/obj/Debug/net7.0/MelosBookStore.pdb
 /Users/faithsromawudaappoh/Codebase/Backend/MelosBookStoreBackend/obj/Debug/net7.0/MelosBookStore.genruntimeconfig.cache
 /Users/faithsromawudaappoh/Codebase/Backend/MelosBookStoreBackend/obj/Debug/net7.0/ref/MelosBookStore.dll
+/Users/faithsromawudaappoh/Codebase/Backend/MelosBookStoreBackend/bin/Debug/net7.0/BCrypt.Net-Next.dll
+/Users/faithsromawudaappoh/Codebase/Backend/MelosBookStoreBackend/bin/Debug/net7.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/faithsromawudaappoh/Codebase/Backend/MelosBookStoreBackend/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/faithsromawudaappoh/Codebase/Backend/MelosBookStoreBackend/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+/Users/faithsromawudaappoh/Codebase/Backend/MelosBookStoreBackend/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
+/Users/faithsromawudaappoh/Codebase/Backend/MelosBookStoreBackend/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/faithsromawudaappoh/Codebase/Backend/MelosBookStoreBackend/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+/Users/faithsromawudaappoh/Codebase/Backend/MelosBookStoreBackend/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll

@@ -41,7 +41,7 @@ namespace MelosBookStore.Seed
                     FirstName = "John",
                     LastName = "Doe",
                     Email = "johndoe@jdbooks.com",
-                    Password= "password",
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword("password"),
                     PhoneNumber = "0201234567",
                     ShopName = "JD Books"
                 },
@@ -50,7 +50,7 @@ namespace MelosBookStore.Seed
                     FirstName = "Elizabeth",
                     LastName = "Deer",
                     Email = "elizabethdeer@edbooks.com",
-                    Password= "password",
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword("password"),
                     PhoneNumber = "0201234567",
                     ShopName = "ED Stationery"
                 },
@@ -59,7 +59,7 @@ namespace MelosBookStore.Seed
                     FirstName = "Kwame",
                     LastName = "Pocho",
                     Email = "thepocho@kpbooks.com",
-                    Password= "password",
+                    PasswordHash = BCrypt.Net.BCrypt.HashPassword("password"),
                     PhoneNumber = "0201234567",
                     ShopName = "The Pocho Literature"
                 },
